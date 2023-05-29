@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  '代码检查':
+  check:
     runs-on: ubuntu-latest
     steps:
     - name: '使用自定义action进行单元测试'
       uses: 786980206/pytest@main
 
-  '测试产物传递'
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v3
