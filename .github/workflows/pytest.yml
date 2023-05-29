@@ -14,8 +14,9 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/download-artifact@v3
+    - name: 下载产物
+      uses: actions/download-artifact@v3
       with:
-        name: 'my-artifact'        
+        name: '测试报告'        
     - name: '展示当前目录下文件'
       run: ls -la
