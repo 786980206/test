@@ -5,10 +5,10 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  #   push:
+  #     branches: [ "main" ]
+  #   pull_request:
+  #     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,3 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Run self action
+      - name: push image to swr
+        uses: 786980206/PushImageToHuaWeiCloudSWR@c2869776766e070b290ebf0284f082be64a3e173
+        with:
+          AK: GWPOFXICIVXZWVGPHCEK
+          SK: I4HaaQk1VJeN3PvLMUQhTDBv0bUcheljhiEkVXrL
