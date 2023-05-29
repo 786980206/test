@@ -7,18 +7,5 @@ jobs:
   Check:
     runs-on: ubuntu-latest
     steps:
-    - name: '代码下载'
-      uses: actions/checkout@v3
-      
-    - name: 'python安装'
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.8
-        
-    - name: '依赖库安装'
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        
-    - name: '运行单元测试'
-      run: pytest
+    - name: '使用自定义action进行单元测试'
+      uses: 786980206/pytest@b398ba0882223a0490b3f6bafacbf0e68c975e27
