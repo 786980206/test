@@ -13,7 +13,7 @@ jobs:
     - name: 'python安装'
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10.2
+        python-version: 3.10
         
     - name: '依赖库安装'
       run: |
