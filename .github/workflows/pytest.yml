@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: '使用自定义action进行单元测试'
-      uses: 786980206/pytest@b398ba0882223a0490b3f6bafacbf0e68c975e27
+      uses: 786980206/pytest@85e8a276a9aac0e1dddbdf63b4290e7e187d688b
