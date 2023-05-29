@@ -11,6 +11,7 @@ jobs:
       uses: 786980206/pytest@main
 
   build:
+    needs: check
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v3
