@@ -3,12 +3,6 @@ name: 'Python单元测试'
 on: 
   workflow_dispatch:
 
-input:
-    python_version:
-      description: 'pyton版本'
-      required: true
-      default: 3.8
-
 jobs:
   check:
     runs-on: ubuntu-latest
