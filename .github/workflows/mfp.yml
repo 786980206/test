@@ -40,4 +40,4 @@ jobs:
         uses: 786980206/PushImageToHuaWeiCloudSWR@c2869776766e070b290ebf0284f082be64a3e173
         with:
           AK: GWPOFXICIVXZWVGPHCEK
-          SK: I4HaaQk1VJeN3PvLMUQhTDBv0bUcheljhiEkVXrL
+          SK: xxx
