@@ -21,6 +21,6 @@ jobs:
     steps:
     - uses: actions/download-artifact@v3
       with:
-        name: '测试报告'        
+        name: 'my-artifact'        
     - name: '展示当前目录下文件'
       run: ls -la
