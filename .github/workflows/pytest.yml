@@ -20,10 +20,11 @@ jobs:                                                            # 任务编排
         name: '测试报告'        
     - name: '展示当前目录下文件'
       run: ls -la
+    - name: '获取自定义action输出'
+      run: echo ${{ needs.check.outputs.test }}
 
   set_output:
     runs-on: ubuntu-latest
-    # Map a step output to a job output
     outputs:                                                     # 指定Job的输出矩阵, 和我们的处理不太一样, 我们Job的outputs是直接由steps的output汇总来的, 不是定义出来的
       output1: ${{ steps.step1.outputs.test }}
       output2: ${{ steps.step2.outputs.test }}
