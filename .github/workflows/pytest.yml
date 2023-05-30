@@ -6,12 +6,12 @@ on:                                                              # 触发方式
 jobs:                                                            # 任务编排
   check:                                                         # Job ID
     runs-on: ubuntu-latest                                       # 指定执行环境
+    outputs:
+      test: ${{ steps.self-action.outputs.test }}
     steps:                                                       # 步骤编排
     - id: self-action
       name: '使用自定义action进行单元测试'                         # 步骤名称
       uses: 786980206/pytest@main                                # 指定使用的action和版本, 类似于选择插件和版本, 这里指定的是一个自定义的action
-    - name: '获取自定义action输出'
-      run: echo ${{ steps.self-action.outputs.test }}
 
   build:                                                         # Job ID
     needs: check                                                 # 设置依赖关系, 决定了流水线是串行还是并行
@@ -23,6 +23,8 @@ jobs:                                                            # 任务编排
         name: '测试报告'        
     - name: '展示当前目录下文件'
       run: ls -la
+    - name: '获取自定义action输出'
+      run: echo ${{needs.check.outputs.test}}                    # 获取其他Job中自定义action的输出 
 
   set_output:
     runs-on: ubuntu-latest
