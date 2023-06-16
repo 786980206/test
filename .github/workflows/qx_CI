@@ -1,1 +1,21 @@
+name: 'Python单元测试'                                            # 等同于流水线名称
 
+on:                                                              # 触发方式
+  workflow_dispatch:
+
+jobs:                                                            # 任务编排
+  check:                                                         # Job ID
+    runs-on: ubuntu-latest                                       # 指定执行环境
+    steps:                                                       # 步骤编排
+      - uses: actions/checkout@v3
+        with:
+          repository: 786980206/qx
+          submodules: `true`
+      - run:
+        shell: bash
+          gcc -shared -fPIC qx.c -o qx.so
+       
+      - uses: actions/upload-artifact@v3
+        with:
+          name: 'qx.so'
+          path: qx.so
