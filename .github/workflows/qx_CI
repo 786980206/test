@@ -1,4 +1,4 @@
-name: 'Python单元测试'                                            # 等同于流水线名称
+name: 'qx构建'                                            # 等同于流水线名称
 
 on:                                                              # 触发方式
   workflow_dispatch:
