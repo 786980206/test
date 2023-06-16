@@ -26,6 +26,7 @@ jobs:                                                            # 任务编排
         with:
           repository: 786980206/qx
           submodules: true
+      # https://github.com/marketplace/actions/enable-developer-command-prompt
       - uses: ilammy/msvc-dev-cmd@v1 
         with:
           arch: x86
