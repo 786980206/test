@@ -10,9 +10,8 @@ jobs:                                                            # 任务编排
       - uses: actions/checkout@v3
         with:
           repository: 786980206/qx
-          submodules: `true`
+          submodules: true
       - run:
-        shell: bash
           gcc -shared -fPIC qx.c -o qx.so
        
       - uses: actions/upload-artifact@v3
