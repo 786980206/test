@@ -29,6 +29,7 @@ jobs:                                                            # 任务编排
       - run: |
           build.bat
           dir
+        shell: cmd
        
       - uses: actions/upload-artifact@v3
         with:
