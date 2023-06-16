@@ -26,13 +26,14 @@ jobs:                                                            # 任务编排
         with:
           repository: 786980206/qx
           submodules: true
-      - uses: ilammy/msvc-dev-cmd@v1     
+      - uses: ilammy/msvc-dev-cmd@v1 
+        with:
+          arch: x86
       - run: |
           build.bat
-          dir
         shell: cmd
        
       - uses: actions/upload-artifact@v3
         with:
-          name: 'qx.so'
-          path: qx.so
+          name: 'qx.dll'
+          path: qx.dll
