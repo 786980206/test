@@ -12,7 +12,7 @@ jobs:                                                            # 任务编排
           repository: zholos/qml
           submodules: true
       - run: |
-          ./configure
+          ./configure KXARCH=l32
           make
           make test    
           ls -l
