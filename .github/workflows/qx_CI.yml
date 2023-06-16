@@ -26,7 +26,8 @@ jobs:                                                            # 任务编排
         with:
           repository: 786980206/qx
           submodules: true
-      - run:
+      - run: |
+          sudo dnf install glibc-headers
           gcc -m32 -shared -fPIC qx.c -o qx.so
        
       - uses: actions/upload-artifact@v3
