@@ -12,7 +12,7 @@ jobs:                                                            # 任务编排
           repository: zholos/qml
           submodules: true
       - run: |
-          CC="gcc -m32" ./configure --target="i386-linux"
+          ./configure
           make
           make test    
           ls -l
