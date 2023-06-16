@@ -1,4 +1,4 @@
-name: '786980206/qx 构建'                                            # 等同于流水线名称
+name: 'qml 构建'                                            # 等同于流水线名称
 
 on:                                                              # 触发方式
   workflow_dispatch:
